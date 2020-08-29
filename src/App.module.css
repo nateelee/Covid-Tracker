@@ -5,4 +5,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 770px) {
+    .container {
+        margin: 0 10%;
+        
+    }
+}
+.h1 {
+    display: inline-block;
+    font-size: 60px;
+    font-family: 'Times New Roman';
+    line-height: 0px;
+    height: 1px;
+
 }
