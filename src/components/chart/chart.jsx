@@ -3,14 +3,15 @@ import {fetchDailyData} from '../../api';
 import {Line, Bar} from 'react-chartjs-2';
 import styles from './chart.module.css';
 const Chart = ({ data : {confirmed, deaths, recovered}, country }) => {
+
     const [dailyData, setDailyData] = useState([]); // only for global
     useEffect(()=>{
         const fetchAPI = async () => {
             setDailyData( await fetchDailyData());
         }
-       
         fetchAPI();
     },[]);
+    
     const lineChart = (
         dailyData.length
         ?(
