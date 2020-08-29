@@ -14,8 +14,6 @@ class App extends Component {
     async componentDidMount () {
         const fetchedData = await fetchData();
         this.setState({data: fetchedData});
-        
-
     }
     handleCountryChange = async(country) => {
         const fetchedData = await fetchData(country);
@@ -28,7 +26,7 @@ class App extends Component {
         const {data , country, } = this.state;
         return (
             <div class = {styles.container}>
-                <h1 className = {styles.h1}>Covid Tracker</h1>
+                <p className = {styles.p}>Covid Tracker</p>
                 <Cards data = {data}/>
                 <CountryPicker handleCountryChange = {this.handleCountryChange}/>
                 <Chart data = {data} country = {country}/>

@@ -4,6 +4,7 @@ import styles from './cards.module.css'
 import CountUp from 'react-countup';
 import cx from 'classnames';
 const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
+    
    if (!confirmed) {
         return 'Loading...';
    }
@@ -23,7 +24,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                             />
                         </Typography>
                         <Typography color = "textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant = "body2">NUMBER OF ACTIVE CASES OF COVID</Typography>
+                        <Typography variant = "body2">Number of infected cases of Covid-19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component = {Card} xs = {12} md = {3} className = {cx(styles.card,styles.recovered)}>
@@ -38,12 +39,12 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                             />
                         </Typography>
                         <Typography color = "textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant = "body2">NUMBER OF RECOVERIES OF COVID</Typography>
+                        <Typography variant = "body2">Number of recoveries from Covid-19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component = {Card} xs = {12} md = {3} className = {cx(styles.card,styles.deaths)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>DEATHS</Typography>
+                        <Typography color="textSecondary" gutterBottom>Deaths</Typography>
                         <Typography variant = "h5">
                             <CountUp
                                 start = {0}
@@ -53,7 +54,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                             />
                         </Typography>
                         <Typography color = "textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant = "body2">NUMBER OF DEATHS BY COVID</Typography>
+                        <Typography variant = "body2">Number of deaths from Covid-19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>

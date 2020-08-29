@@ -10,15 +10,24 @@ body {
 
 @media (max-width: 770px) {
     .container {
-        margin: 0 10%;
-        
+        margin: 0 10%;  
+    }
+    .p {
+        display: inline-block;
+        font-size: 40px;
+        font-family: 'Times New Roman';
+        line-height: -10px;
+        height: 0px;
+
     }
 }
-.h1 {
-    display: inline-block;
-    font-size: 60px;
-    font-family: 'Times New Roman';
-    line-height: 0px;
-    height: 1px;
-
+@media (min-width: 771px) {
+    .p {
+        display: inline-block;
+        font-size: 60px;
+        font-family: 'Times New Roman';
+        line-height: 0px;
+        height: 1px;
+    
+    }
 }
