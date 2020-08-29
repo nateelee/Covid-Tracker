@@ -13,7 +13,14 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                 <Grid item component = {Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Infected</Typography>
-                        <Typography variant = "h5">{confirmed.value}</Typography>
+                        <Typography variant = "h5">
+                            <CountUp
+                                start = {0}
+                                end = {confirmed.value}
+                                duration = {2.5}
+                                seperator = ","
+                            />
+                        </Typography>
                         <Typography color = "textSecondary">REAL DATE</Typography>
                         <Typography variant = "body2">NUMBER OF ACTIVE CASES OF COVID</Typography>
                     </CardContent>
